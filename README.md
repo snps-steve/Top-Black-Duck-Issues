@@ -1,77 +1,49 @@
-# Vulnerability Extraction Script
+Top Black Duck Issues
+Overview
+This repository contains a Python script designed to extract and analyze vulnerabilities from Black Duck data. The script fetches information about vulnerable components, identifies vulnerabilities based on the CWE Top 25 and OWASP Top 10 lists, and outputs relevant details.
 
-## Overview
+Features
+Fetch Vulnerabilities: Retrieves vulnerable components from a specified Black Duck project and version.
+Match Vulnerabilities: Compares vulnerabilities against the CWE Top 25 and OWASP Top 10 lists.
+Detailed Output: Provides a detailed output of vulnerabilities, including component name, version, severity, and more.
+Prerequisites
+Python 3.x
+Required Python packages (to be listed in requirements.txt)
+Installation
+Clone this repository:
 
-This Python script extracts and processes vulnerability information from a specified endpoint. It identifies vulnerabilities related to software components and matches them against known vulnerability lists, such as the Top 25 CWEs and OWASP Top 10. The script provides options to set or confirm project details and API configuration from an `.env` file.
+bash
+Copy code
+git clone https://github.com/your-username/Top-Black-Duck-Issues.git
+Navigate to the project directory:
 
-## Features
+bash
+Copy code
+cd Top-Black-Duck-Issues
+Install the required Python packages:
 
-- Extracts vulnerabilities from the API.
-- Matches vulnerabilities against Top 25 CWEs 2023 and OWASP Top 10 2021.
-- Displays matched vulnerabilities with color-coded warnings.
-- Allows user to input or confirm project and API details.
-
-## Requirements
-
-- Python 3.x
-- Requests library
-
-You can install the required Python package using pip:
-
-```bash
-pip install requests
+bash
+Copy code
+pip install -r requirements.txt
 Usage
-Prepare Configuration
+Set up your environment variables in a .env file or modify the script directly.
 
-Or, you can let the script try to install the requests library with pip.
+Run the script:
 
-You can either create a .env file in the same directory with the following variables:
+bash
+Copy code
+python top_black_duck_issues.py
+Configuration
+The script requires configuration for BASEURL and API_TOKEN. These can be set up in a .env file or directly within the script.
 
-BASEURL=<Your API Base URL>
-API_TOKEN=<Your API Token>
-project=<project name>
-project_version=<project version>
-
-Or you can let the script prompt you for these pieces of information.
-
-Execute the script using Python:
-
-python top.py
-If a .env file is detected, you will be prompted to confirm or enter the project name, version name, base URL, and API token.
-
-View Results
-
-The script outputs the identified vulnerabilities, showing details including component name, version, and matches to known vulnerability lists in color-coded text.
-
-Functions
-extract_cwe_id(cwe_id)
-Extracts the numeric part from a CWE ID string.
-
-get_match_info(cwe_id)
-Returns match information for a given CWE ID, including Top 25 CWEs 2023 and OWASP Top 10 2021.
-
-extract_vulnerabilities(vulnerable_components)
-Extracts and processes vulnerability information from the API response.
-
-Example Output:
-
-2024-08-05 09:42:32,418 - INFO - Identified Vulnerabilities:
-[{
-  'componentName': 'apache/xerces-c',
-  'componentVersionName': '3.1.1',
-  'cweId': 'CWE-119',
-  'match': '\033[0;37;93mTop 25 CWEs 2023: Match: 119: Improper Restriction of Operations within the Bounds of a Memory Buffer\033[0;37;0m',
-  'description': 'Stack-based buffer overflow in Apache Xerces-C++ before 3.1.4...',
-  'name': 'CVE-2016-4463',
-  'severity': 'HIGH'
-}]
+Example
+If a .env file is detected, the script will prompt you to accept or modify the project name, version name, BASEURL, and API_TOKEN.
 
 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 Contributing
-Feel free to submit issues or pull requests. For major changes, please open an issue first to discuss what you would like to change.
+If you would like to contribute to this project, please fork the repository and submit a pull request.
 
-
-
-
+Contact
+For any questions or issues, please ssmith@blackduck.com.
