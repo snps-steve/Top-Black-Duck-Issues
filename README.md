@@ -48,7 +48,7 @@ python top.py
 ### Configuration
 During the first execution of the script, the user will be prompted for the BASEURL, API_TOKEN, project, and project version. These fields will then be stored in a .env file in the project folder. If a .env file is detected, the script will prompt you to either use the existing BASEURL, API_TOKEN, project, and project version as 'defaults' or you can enter different information.
 <br><br>
-Example:
+Example .env file:
 <br><br>
 BASEURL=https://blackduck.synopsys.com<br>
 API_TOKEN=[REDACTED]<br>
