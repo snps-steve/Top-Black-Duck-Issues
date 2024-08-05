@@ -57,6 +57,7 @@ def check_and_install_packages():
     try:
         import requests
         from requests.packages.urllib3.exceptions import InsecureRequestWarning
+        from dotenv import load_dotenv
     except ImportError:
         missing_packages = ['requests']
         install = input(f"The following packages are missing: {missing_packages}. Do you want to install them? Yes/no (default is Yes): ").strip().lower()
@@ -65,6 +66,7 @@ def check_and_install_packages():
                 subprocess.check_call([sys.executable, "-m", "pip", "install"] + missing_packages)
                 import requests
                 from requests.packages.urllib3.exceptions import InsecureRequestWarning
+                from dotenv import load_dotenv
             except subprocess.CalledProcessError as e:
                 logging.error(f"Failed to install packages: {e}")
                 sys.exit()
