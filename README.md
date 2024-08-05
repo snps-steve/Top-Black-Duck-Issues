@@ -21,6 +21,7 @@ You can install the required Python package using pip or let the script install 
 
 ```bash
 pip install requests
+```
 
 ### Installation
 Clone this repository:
