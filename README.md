@@ -20,7 +20,7 @@ The script provides options to set or confirm project details and API configurat
 You can install the required Python package using pip or let the script install them for you:
 
 ```bash
-pip install requests dot-env
+pip install requests python-dotenv
 ```
 
 ## Installation
