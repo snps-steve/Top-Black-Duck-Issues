@@ -59,20 +59,40 @@ def check_and_install_packages():
         from requests.packages.urllib3.exceptions import InsecureRequestWarning
         from dotenv import load_dotenv
     except ImportError:
-        missing_packages = ['requests']
-        install = input(f"The following packages are missing: {missing_packages}. Do you want to install them? Yes/no (default is Yes): ").strip().lower()
-        if install in ('', 'y', 'yes'):
-            try:
-                subprocess.check_call([sys.executable, "-m", "pip", "install"] + missing_packages)
-                import requests
-                from requests.packages.urllib3.exceptions import InsecureRequestWarning
-                from dotenv import load_dotenv
-            except subprocess.CalledProcessError as e:
-                logging.error(f"Failed to install packages: {e}")
+        missing_packages = []
+        try:
+            import requests
+        except ImportError:
+            missing_packages.append('requests')
+
+        try:
+            from requests.packages.urllib3.exceptions import InsecureRequestWarning
+        except ImportError:
+            if 'requests' not in missing_packages:
+                missing_packages.append('requests')
+
+        try:
+            from dotenv import load_dotenv
+        except ImportError:
+            missing_packages.append('python-dotenv')
+
+        if missing_packages:
+            install = input(f"The following packages are missing: {missing_packages}. Do you want to install them? Yes/no (default is Yes): ").strip().lower()
+            if install in ('', 'y', 'yes'):
+                try:
+                    subprocess.check_call([sys.executable, "-m", "pip", "install"] + missing_packages)
+                    import requests
+                    from requests.packages.urllib3.exceptions import InsecureRequestWarning
+                    from dotenv import load_dotenv
+                except subprocess.CalledProcessError as e:
+                    logging.error(f"Failed to install packages: {e}")
+                    sys.exit()
+            elif install in ('n', 'no'):
+                logging.info("Installation aborted by the user.")
                 sys.exit()
-        else:
-            logging.info("Installation aborted by the user.")
-            sys.exit()
+            else:
+                logging.info("Invalid input. Installation aborted.")
+                sys.exit()
 
 def prompt_with_default(prompt, default):
     '''Prompt the user with a default value.'''
