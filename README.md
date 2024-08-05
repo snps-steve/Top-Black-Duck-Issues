@@ -27,7 +27,7 @@ pip install requests
 Clone this repository:
 
 ```bash
-git clone[ https://github.com/your-username/Top-Black-Duck-Issues.git](https://github.com/snps-steve/Top-Black-Duck-Issues/)
+git clone https://github.com/snps-steve/Top-Black-Duck-Issues
 ```
 
 Navigate to the project directory:
