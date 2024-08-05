@@ -36,7 +36,7 @@ Navigate to the project directory:
 cd Top-Black-Duck-Issues
 ```
 
-#### Usage
+### Usage
 Set up your environment variables in a .env file or simply let the script prompt you for the required information. 
 
 Run the script:
@@ -45,7 +45,7 @@ Run the script:
 python top.py
 ```
 
-#### Configuration
+### Configuration
 During the first execution of the script, it will prompt the user for BASEURL, API_TOKEN, project, and project version. These fields will then be stored in a .env file. 
 
 Example
