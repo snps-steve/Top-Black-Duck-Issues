@@ -12,27 +12,23 @@ Required Python packages (to be listed in requirements.txt)
 Installation
 Clone this repository:
 
-bash
-Copy code
 git clone https://github.com/your-username/Top-Black-Duck-Issues.git
+
 Navigate to the project directory:
 
-bash
-Copy code
 cd Top-Black-Duck-Issues
+
 Install the required Python packages:
 
-bash
-Copy code
 pip install -r requirements.txt
+
 Usage
 Set up your environment variables in a .env file or modify the script directly.
 
 Run the script:
 
-bash
-Copy code
 python top_black_duck_issues.py
+
 Configuration
 The script requires configuration for BASEURL and API_TOKEN. These can be set up in a .env file or directly within the script.
 
@@ -46,4 +42,4 @@ Contributing
 If you would like to contribute to this project, please fork the repository and submit a pull request.
 
 Contact
-For any questions or issues, please ssmith@blackduck.com.
+For any questions or issues, please contact ssmith@blackduck.com.
