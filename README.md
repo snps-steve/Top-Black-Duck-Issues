@@ -46,7 +46,7 @@ python top.py
 ```
 
 ### Configuration
-During the first execution of the script, it will prompt the user for BASEURL, API_TOKEN, project, and project version. These fields will then be stored in a .env file. 
+During the first execution of the script, the user will be prompted for BASEURL, API_TOKEN, project, and project version. These fields will then be stored in a .env file. 
 
 Example
 If a .env file is detected, the script will prompt you to either use the existing BASEURL, API_TOKEN, project, and project version as 'defaults' or you can enter different information.
