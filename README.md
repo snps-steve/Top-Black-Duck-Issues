@@ -23,15 +23,20 @@ pip install requests
 Usage
 Prepare Configuration
 
-Ensure you have a .env file in the same directory with the following variables:
+Or, you can let the script try to install the requests library with pip.
+
+You can either create a .env file in the same directory with the following variables:
 
 BASEURL=<Your API Base URL>
 API_TOKEN=<Your API Token>
-Run the Script
+project=<project name>
+project_version=<project version>
+
+Or you can let the script prompt you for these pieces of information.
 
 Execute the script using Python:
 
-python script_name.py
+python top.py
 If a .env file is detected, you will be prompted to confirm or enter the project name, version name, base URL, and API token.
 
 View Results
