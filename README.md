@@ -26,18 +26,24 @@ pip install requests
 ### Installation
 Clone this repository:
 
+```bash
 git clone https://github.com/your-username/Top-Black-Duck-Issues.git
+```
 
 Navigate to the project directory:
 
+```bash
 cd Top-Black-Duck-Issues
+```
 
 #### Usage
 Set up your environment variables in a .env file or simply let the script prompt you for the required information. 
 
 Run the script:
 
+```bash
 python top.py
+```
 
 Configuration
 During the first execution of the script, it will prompt the user for BASEURL, API_TOKEN, project, and project version. These fields will then be stored in a .env file. 
