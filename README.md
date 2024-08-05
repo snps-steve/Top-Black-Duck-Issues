@@ -27,13 +27,13 @@ pip install requests
 Clone this repository:
 
 ```bash
-git clone https://github.com/snps-steve/Top-Black-Duck-Issues
+git clone https://github.com/snps-steve/top-black-duck-issues
 ```
 
 Navigate to the project directory:
 
 ```bash
-cd Top-Black-Duck-Issues
+cd top-black-duck-issues
 ```
 
 ### Usage
