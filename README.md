@@ -45,17 +45,17 @@ Run the script:
 python top.py
 ```
 
-Configuration
+##### Configuration
 During the first execution of the script, it will prompt the user for BASEURL, API_TOKEN, project, and project version. These fields will then be stored in a .env file. 
 
 Example
 If a .env file is detected, the script will prompt you to either use the existing BASEURL, API_TOKEN, project, and project version as 'defaults' or you can enter different information.
 
-License
+###### License
 This project is licensed under the MIT License.
 
-Contributing
+####### Contributing
 If you would like to contribute to this project, please fork the repository and submit a pull request.
 
-Contact
+######## Contact
 For any questions or issues, please contact Steve Smith (ssmith@blackduck.com).
