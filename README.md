@@ -8,7 +8,7 @@ The script provides options to set or confirm project details and API configurat
 
 ## Features
 
-- Fetch Vulnerabilities: Retrieves vulnerable components from a specified Black Duck project and version from the specified Black Duck Server's APIs.
+- Fetch Vulnerabilities: Retrieves vulnerable components from a specified Black Duck project and version from the specified BD Server's APIs.
 - Match Vulnerabilities: Compares vulnerabilities against the CWE Top 25 and OWASP Top 10 lists.
 - Detailed Output: Provides a detailed output of vulnerabilities, including component name, version, severity, and more.
 
